@@ -1,6 +1,14 @@
 ---@meta
----@class qbx_core
-exports.qbx_core = {}
+---@class qb-core-object
+exports['qb-core'] = {}
+
+---@class qb-core
+local QBCore = {}
+
+---comment
+---@return qb-core
+function exports['qb-core']:GetCoreObject() end
+
 
 --- —[ bridge qb server: functions ]—
 -- Add or change (a) field(s) in the QBCore table
@@ -9,4 +17,4 @@ exports.qbx_core = {}
 ---@param data any
 ---@return boolean success
 ---@return string message
-function exports.qbx_core:SetField(fieldName, data) end
+function QBCore:SetField(fieldName, data) end
